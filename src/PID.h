@@ -1,8 +1,9 @@
 #ifndef PID_H
 #define PID_H
 
-class PID {
- public:
+class PID
+{
+public:
   /**
    * Constructor
    */
@@ -31,7 +32,9 @@ class PID {
    */
   double TotalError();
 
- private:
+  double CalculateSteeringValue() const;
+
+private:
   /**
    * PID Errors
    */
@@ -39,12 +42,15 @@ class PID {
   double i_error;
   double d_error;
 
+  double previous_cte{0};
+  double sum_cte{0};
+
   /**
    * PID Coefficients
-   */ 
+   */
   double Kp;
   double Ki;
   double Kd;
 };
 
-#endif  // PID_H
+#endif // PID_H

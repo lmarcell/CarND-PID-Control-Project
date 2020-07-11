@@ -1,0 +1,18 @@
+1. The effect of the parameters:
+
+P:
+I found 0.1 as the best value for P.
+If P is much higher the car makes big steering movements even in the smallest curves.
+If P is much smaller the car doesn't steer enough, so that in the bigger curves it touches the edge of the road.
+
+I:
+I found 0.02 as the best value for I.
+If I is much higher, then the car leaves the road shortly after start.
+If I is much small (even 0) the car can still drive without leaving the road, but with having the I component it is driving smoother.
+
+D:
+I found 0.8 as the best value for D.
+If D is much higher the car has a lot of sudden direction changes.
+If D is much smaller the car leaves the road shortly after the start.
+
+I did not use any dedicated algorithm to find the current values, I just set them based on what I experienced.
